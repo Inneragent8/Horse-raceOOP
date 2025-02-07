@@ -41,9 +41,7 @@ getPosition() const: Returns the current position of the horse.
 
 getId() const: Returns the ID of the horse.
 
-Race Class
-
-Attributes:
+Race
 
 horses: A list of Horse objects participating in the race.
 

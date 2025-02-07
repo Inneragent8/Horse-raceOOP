@@ -2,6 +2,7 @@
 
 this is the diagram
 also sorry if this is not what you wanted i have been sick and have been trying to learn only from the videos i will be back in class on monday so again sorry i should have told you earlier 
+
 Horse
 _____________________
 - id: int        

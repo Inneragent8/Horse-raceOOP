@@ -52,6 +52,6 @@ int main() {
         cin.get();
     }
     
-    cout << "The race is over!" << endl;
+    cout << "The race is over" << endl;
     return 0;
 }

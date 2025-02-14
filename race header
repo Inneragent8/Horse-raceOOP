@@ -1,0 +1,22 @@
+#ifndef RACE_H
+#define RACE_H
+
+#include "Horse.h"
+#include <vector>
+#include <iostream>
+
+class Race {
+public:
+    Race(int numHorses, int trackLength);
+    void start();
+
+private:
+    std::vector<Horse> horses;
+    int trackLength;
+
+    void advanceHorses();
+    void displayRace() const;
+    bool isFinished() const;
+};
+
+#endif

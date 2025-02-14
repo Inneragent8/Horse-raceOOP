@@ -1,0 +1,9 @@
+#include "Race.h"
+#include <ctime>
+
+int main() {
+    srand(time(0));
+    Race race(5, 15);
+    race.start();
+    return 0;
+}

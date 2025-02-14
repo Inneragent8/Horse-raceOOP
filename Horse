@@ -1,0 +1,16 @@
+#ifndef HORSE_H
+#define HORSE_H
+
+class Horse {
+public:
+    Horse(int id);
+    void advance();
+    int getPosition() const;
+    int getId() const;
+
+private:
+    int id;
+    int position;
+};
+
+#endif

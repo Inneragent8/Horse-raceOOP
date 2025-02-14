@@ -1,0 +1,51 @@
+#include "Race.h"
+#include <cstdlib>
+#include <ctime>
+
+Race::Race(int numHorses, int trackLength) : trackLength(trackLength) {
+    for (int i = 0; i < numHorses; ++i) {
+        horses.emplace_back(i);
+    }
+}
+
+void Race::start() {
+    std::cout << "Welcome to the Horse Race! Press Enter to start the race." << std::endl;
+    std::cin.get();
+    
+    while (!isFinished()) {
+        advanceHorses();
+        displayRace();
+        std::cout << "Press Enter for the next turn...";
+        std::cin.get();
+    }
+    
+    std::cout << "The race is over!" << std::endl;
+}
+
+void Race::advanceHorses() {
+    for (auto& horse : horses) {
+        horse.advance();
+    }
+}
+
+void Race::displayRace() const {
+    for (const auto& horse : horses) {
+        for (int j = 0; j < trackLength; ++j) {
+            if (j == horse.getPosition())
+                std::cout << horse.getId();
+            else
+                std::cout << '.';
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+bool Race::isFinished() const {
+    for (const auto& horse : horses) {
+        if (horse.getPosition() >= trackLength - 1) {
+            return true;
+        }
+    }
+    return false;
+}
